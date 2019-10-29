@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+# Parallel Agent Simulator Proposal
 
-You can use the [editor on GitHub](https://github.com/VenkatKS/parallelagent.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Summary
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+We are going to implement a multi-agent, single-environment simulator that plugs into OpenAI gym to allow for parallelized agent trajectories, while still allowing for rich interactions between the agents, and provide a detailed analysis of the trade-offs between our implementation and the current state of the art simulators. 
 
-### Markdown
+## Background
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+OpenAI provides an API that allows for engineers to specify the environment in which their reinforcement learning agent will interact in. This environment is essentially a simulator, akin to the n-body simulator that we worked with during class. In most cases, the simulator will only support a single agent interacting with the environment (analogous to single player games); such problems need no parallelzation as there is only a single "thread" operating on the shared data ("the environment"). In a sense, we can think of each agent as an "instruction stream" or a "thread", as each agent will be able to make independent actions that directly impact the shared space. 
 
-```markdown
-Syntax highlighted code block
+However, when we introduce multiple agents and allow for them to interact with each other, then we open up the possibility of multiple streams of execution, as each agent is autonomous and will likely make their own decisions independent of the others. This leads to multiple parallel instruction streams, and requires multiple "threads" to interact with the environment, leading to a need for parallelism. This project seeks to add CUDA support for parallelizing these interactions.
 
-# Header 1
-## Header 2
-### Header 3
+## The Challenge
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/VenkatKS/parallelagent.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+TBD.
