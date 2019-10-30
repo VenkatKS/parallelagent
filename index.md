@@ -30,11 +30,12 @@ Further, updating the environment after all the agents finish their updates also
 - Implement a gridworld environment[3] with support for parallel agent updates.
 - Compare performance against sequential and OpenMP implementation (latter provided by MAgent[3] framework) for one game within gridworld (such as a battle scenario between 2 armies of particles).
 
-###Project goals:
+### Project goals:
 - Implement an automatically generated tile-based game (this is suggested as benchmark environment by [4]).
 - Implement parallelism for agents, and for environment updates.
 - Analyze requirements and bottlenecks for both kinds of parallelism. Compare against sequential implementation (or possibly a simple MPI-based implementation).
-###Challenge goals:
+
+### Challenge goals:
 - Compare CUDA implementation to a tree-based OpenMP implementation (for instance, cluster agents by some interaction metric, compute updates in parallel, and reduce for the environment).
 
 ## Platform Choice
