@@ -55,10 +55,10 @@ We will largely utilize Python and PyCUDA, as our contributions will be to OpenA
 
 ## References
 
-Hernandez-Leal, Pablo, Bilal Kartal, and Matthew E. Taylor. "A survey and critique of multiagent deep reinforcement learning." Autonomous Agents and Multi-Agent Systems (2019): 1-48.
-Yang, Yaodong, et al. "A Study of AI Population Dynamics with Million-agent Reinforcement Learning." Proceedings of the 17th International Conference on Autonomous Agents and MultiAgent Systems. International Foundation for Autonomous Agents and Multiagent Systems, 2018.
-Zheng, Lianmin, et al. "MAgent: A many-agent reinforcement learning platform for artificial collective intelligence." Thirty-Second AAAI Conference on Artificial Intelligence. 2018.
-Suarez, Joseph, et al. "Neural MMO: A Massively Multiagent Game Environment for Training and Evaluating Intelligent Agents." arXiv preprint arXiv:1903.00784 (2019).
-Littman, Michael L. "Markov games as a framework for multi-agent reinforcement learning." Machine learning proceedings 1994. Morgan Kaufmann, 1994. 157-163.
-Brockman, Greg, et al. "Openai gym." arXiv preprint arXiv:1606.01540 (2016).
+1. Hernandez-Leal, Pablo, Bilal Kartal, and Matthew E. Taylor. _"A survey and critique of multiagent deep reinforcement learning."_ Autonomous Agents and Multi-Agent Systems (2019): 1-48.
+2. Yang, Yaodong, et al. _"A Study of AI Population Dynamics with Million-agent Reinforcement Learning."_ Proceedings of the 17th International Conference on Autonomous Agents and MultiAgent Systems. International Foundation for Autonomous Agents and Multiagent Systems, 2018.
+3. Zheng, Lianmin, et al. _"MAgent: A many-agent reinforcement learning platform for artificial collective intelligence."_ Thirty-Second AAAI Conference on Artificial Intelligence. 2018.
+4. Suarez, Joseph, et al. _"Neural MMO: A Massively Multiagent Game Environment for Training and Evaluating Intelligent Agents."_ arXiv preprint arXiv:1903.00784 (2019).
+5. Littman, Michael L. _"Markov games as a framework for multi-agent reinforcement learning."_ Machine learning proceedings 1994. Morgan Kaufmann, 1994. 157-163.
+6. Brockman, Greg, et al. _"Openai gym."_ arXiv preprint arXiv:1606.01540 (2016).
 
