@@ -52,9 +52,13 @@ We will largely utilize Python and PyCUDA, as our contributions will be to OpenA
 
 | Week Of      | Goal |
 | ----------- | ----------- |
-| October 28, 2019      | Finish meeting with professor, pre-proposal submissions, finalize problem statement       |
-| November 4, 2019  | Finish design of basic API that will be external facing, implement initial sequential simple gridworld examples, decide what baseline metrics will be used to compare the sequential gridworld example with the parallel reimplementations, replicate gridworld examples from MAgent and collect metrics        |
-| November 11, 2019  | Finish initial parallel gridworld examples using the new API, collect equivalent metrics for the new gridworld implementation, begin on midterm report.   |
+| October 28, 2019  | Finish meeting with professor, pre-proposal submissions, finalize problem statement       |
+| November 4, 2019  | Finish design of basic API that will be external facing, implement initial sequential simple gridworld examples |
+| November 11, 2019 | Decide what baseline metrics will be used to compare the sequential gridworld example with the parallel reimplementations, replicate gridworld examples from MAgent and collect metrics        |
+| November 18, 2019 | Finish initial parallel gridworld examples using the new API, collect equivalent metrics for the new gridworld implementation, begin on midterm report.   |
+| November 22, 2019 | _Meeting regarding milestone progress_ |
+| November 25, 2019 | Implement parallel agents and tile-based game, and collect results |
+| December 02, 2019 | Collect and analyze results, prepare poster |
 
 
 ## References
