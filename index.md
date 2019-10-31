@@ -1,6 +1,7 @@
 # Parallel Agent Simulator: Project Proposal
 
 Group Members: Karthik Duddu (sduddu@cs.cmu.edu), Venkat K Srinivasan (venkatks@cs.cmu.edu)
+
 Website URL: [https://venkatks.github.io/parallelagent/](https://venkatks.github.io/parallelagent/)
 
 ## Summary
