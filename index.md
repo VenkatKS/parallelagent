@@ -1,8 +1,11 @@
-# Parallel Agent Simulator: Project Proposal
+Group Members:
 
-Group Members: Karthik Duddu (sduddu@cs.cmu.edu), Venkat K Srinivasan (venkatks@cs.cmu.edu)
+* Karthik Duddu (sduddu@cs.cmu.edu)
+* Venkat K Srinivasan (venkatks@cs.cmu.edu)
 
 Website URL: [https://venkatks.github.io/parallelagent/](https://venkatks.github.io/parallelagent/)
+
+#  Project Proposal
 
 ## Summary
 
@@ -10,9 +13,13 @@ The goal of this project is to provide an efficient parallel implementation for 
 
 ## Background
 
+### Context
+
 Multi-agent learning scenarios for reinforcement learning (RL) are becoming increasingly common[1] due to their applicability to domains such as collective intelligence and population studies[2]. Popular frameworks for dealing with RL environments have been restricted to single-agent frameworks[6], or have limited support for multi-agent environments[3], or require setting up (and understanding) non-trivial parallel architectures[4]. The aim of this project is to provide an efficient implementation for agent actions and environment updates, exposed via a simple API for multi-agent game environments, for scenarios in which agents and environments can be collocated.
 
 The OpenAI Gym provides an API which allows RL algorithms to interface with an “environment” during training and inference. This environment is a simulator (akin to the n-body simulator that we worked with in class) within which one or more independent entities (“agents”) interact to cause changes. Since this environment is invoked millions of times per episode (during both training and inference), implementing such environments efficiently is important for improving throughput of the RL algorithm and for reducing developer turnaround time.
+
+### Parallelization and Objective
 
 There are 2 axes of parallelism which are exposed by multi-agent environments: a) parallelization of agent simulation and interactions, and b) environment state updates on the basis of agent actions. The correctness of applying parallelization is dependent on the nature of the environment and agent interactions - for the purposes of this project, we shall restrict ourselves to games in which agents act simultaneously based on environment state information (Markovian games[5]). For such games, we can think of each agent as an "instruction stream" or a "thread", as each agent will be able to “undertake” independent actions that directly impact the shared space. Furthermore, we intend to target environments and agent populations which can be collocated on the same server. Further discussion of parallelism and the challenges associated with it are discussed in Section 3.
 
@@ -59,7 +66,6 @@ We will largely utilize Python and PyCUDA, as our contributions will be to OpenA
 | November 22, 2019 | _Meeting regarding milestone progress_ |
 | November 25, 2019 | Implement parallel agents and tile-based game, and collect results |
 | December 02, 2019 | Collect and analyze results, prepare poster |
-
 
 ## References
 
