@@ -7,6 +7,11 @@ Website URL: [https://venkatks.github.io/parallelagent/](https://venkatks.github
 
 #  Project Proposal
 
+## Links
+
+[Midterm Report](midterm_report.md)
+
+
 ## Summary
 
 The goal of this project is to provide an efficient parallel implementation for multi-agent, single-environment simulation which interfaces with OpenAI Gym[6] and supports parallelized agent trajectories, while still allowing rich interactions between the agents. In addition to analyzing the trade-offs between our implementation and the current state of the art simulators, we intend to explore efficient ways of parallelization in the presence of data dependencies introduced by the agent interactions with the environment.
