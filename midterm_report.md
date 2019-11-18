@@ -93,6 +93,24 @@ us to examine how efficient each of the aforementioned technologies are at
 parallelizing that particular format of workload and compre and constrast these
 things in the report.
 
+## Delivery At The Poster Session
+
+At the poster session, we plan on discussing the topology of dependencies
+of the various examples, as well as what technology works best for each one.
+A discussion of why will be included, as well. We also plan on having a 
+demo walkthrough of code that uses our technology, and how it makes parallelizing
+multi-agent scenes trivial.
+
+## Largest Concerns
+
+One of the main concerns for us is regarding our stretch goals. We want to 
+utilize CUDA kernels in our deliverables, as well, but due to the memory
+hierarchy of CUDA, it is far more difficult to be able to parallelize any
+arbitrary agent action under this paradigm.
+
+
+
+
 
 
 
