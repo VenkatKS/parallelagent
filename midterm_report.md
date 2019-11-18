@@ -15,7 +15,7 @@ will likely be at the end of the project timeline.
 
 ### Finalization Of The Preliminary Outline
 
-One of the deliverables we wanted to completeby the midterm point is a 
+One of the deliverables we wanted to complete by the midterm point is a 
 API design that will allow us to offer a full-featured interface for 
 GridWorld examples that utilize the package we're offering to build ontop of.
 
@@ -28,8 +28,38 @@ interactions, including the rich data and control dependendencies that might
 arise due to the rich interplay and interactions between each of the agents
 among themselves and with the environment.
 
-If interested, the core packages that we have completed so far can be found 
-under the following link [2].
+In brief, we have devised a 5-stage pipeline which deals with data dependencies
+between agent actions while exploiting both available axes of parallelism -
+agent actions and environment updates. That is,
+
+* _State dependencies between agents_: Actions of a particular agent can influence
+another agent. For instance, an action such as `A1 -> Kill A2` affects A2 but has
+been issued to A1. In order to deal with the agent state dependencies created 
+by actions, we decouple actions and action updates in the interface. This implies
+that our framework has to perform the per-agent action update mapping on the
+basis of the output of the agents.
+
+* _Data dependencies between agent actions and map updates_: In order to efficiently
+deal with map updates by agents (which could potentially have ordering constraints)
+we provide a means of aggregation for related updates via `tags`, thereby
+enabling unrelated map updates to be performed efficiently.
+
+At a high level, our pipeline consists of the following steps:
+1. Perform agent state checks and agent action effect generation (_parallelized
+over agents_). Agent-specific logic is supplied by the environment designer.
+2. Aggregate action-effects for each agent (_parallelized over agents_). This is
+provided by our framework, and allows decoupling of agents affecting each other.
+3. Perform agent state update and generate map updates based on all the supplied
+actions effects (_parallelized over agents_). The specific update is a part of
+the API implemented by the designer.
+4. Aggregate map updates for each 'unit' of the map (_parallelized over updates
+_). This is provided by our framework, and allows unrelated updates to be
+performed in parallel.
+5. Perform map updates (_paralellized over updates_).
+6. Calculate reward received by each agent (_parallelized over agents_).
+
+The sequential implementation has all the above steps implemented. The core 
+packages that we have completed so far can be found under the following link [2].
 
 ### A Sequential Implementation
 
@@ -48,7 +78,7 @@ version of the program.
 
 While initially we wanted to deliver a series of kernels that a user can use
 to trivially parallelize their environment (on their end), akin to the
-Spark98 kernels that were talked about in class, our goals has mutated a bit
+Spark98 kernels that were talked about in class, our goals have mutated a bit
 to change the project to be a bit more exploratory.
 
 We now want to reframe the paper by providing an exploratory analysis of the
