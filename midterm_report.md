@@ -1,8 +1,13 @@
-# Parallel Environment Simulation Midterm Report
+# Midterm Report
 
 ## Resources
 
-Resources for the project on GitHub can be found at the following location [1].
+Group Members:
+
+* Karthik Duddu (sduddu@cs.cmu.edu)
+* Venkat K Srinivasan (venkatks@cs.cmu.edu)
+
+Midterm Report URL: [https://venkatks.github.io/parallelagent/midterm_report](https://venkatks.github.io/parallelagent/midterm_report)
 
 ## Summary Of Work Completed So Far
 
@@ -45,6 +50,7 @@ we provide a means of aggregation for related updates via `tags`, thereby
 enabling unrelated map updates to be performed efficiently.
 
 At a high level, our pipeline consists of the following steps:
+
 1. Perform agent state checks and agent action effect generation (_parallelized
 over agents_). Agent-specific logic is supplied by the environment designer.
 2. Aggregate action-effects for each agent (_parallelized over agents_). This is
@@ -137,15 +143,3 @@ One of the main concerns for us is regarding our stretch goals. We want to
 utilize CUDA kernels in our deliverables, as well, but due to the memory
 hierarchy of CUDA, it is far more difficult to be able to parallelize any
 arbitrary agent action under this paradigm.
-
-
-
-
-
-
-
-
-
-
-
-
