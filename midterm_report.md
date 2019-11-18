@@ -7,7 +7,7 @@ Group Members:
 * Karthik Duddu (sduddu@cs.cmu.edu)
 * Venkat K Srinivasan (venkatks@cs.cmu.edu)
 
-Midterm Report URL: [https://venkatks.github.io/parallelagent/midterm_report](https://venkatks.github.io/parallelagent/midterm_report)
+URL: [Midterm Report Hyperlink](https://venkatks.github.io/parallelagent/midterm_report)
 
 ## Summary Of Work Completed So Far
 
@@ -58,9 +58,9 @@ provided by our framework, and allows decoupling of agents affecting each other.
 3. Perform agent state update and generate map updates based on all the supplied
 actions effects (_parallelized over agents_). The specific update is a part of
 the API implemented by the designer.
-4. Aggregate map updates for each 'unit' of the map (_parallelized over updates
-_). This is provided by our framework, and allows unrelated updates to be
-performed in parallel.
+4. Aggregate map updates for each 'unit' of the map (_parallelized over updates_).
+This is provided by our framework, and allows unrelated updates to be performed
+in parallel.
 5. Perform map updates (_paralellized over updates_).
 6. Calculate reward received by each agent (_parallelized over agents_).
 
@@ -119,9 +119,9 @@ stretch goals, we are shifting our focus into a more analytical approach rather
 than purely focusing on CUDA. 
 
 We want to utilize all of the technologies discussed in class this semester,
-including OpenMP, OpenMPI, Cilk, ISPC, and possibly CUDA (if time permits) into
-our middleware framework and allow the user to specify a technology they want
-our middleware to use to parallelize their workload. 
+including OpenMP, OpenMPI, Pthreads (or fork-join frameworks) and possibly CUDA
+(if time permits) into our middleware framework and allow the user to specify a
+technology they want our middleware to use to parallelize their workload. 
 
 In our report, we want to implement multiple examples, both GridWorld-based and
 non-GridWorld based, that will have varying dependency toplogies that will allow
@@ -135,7 +135,7 @@ At the poster session, we plan on discussing the topology of dependencies
 of the various examples, as well as what technology works best for each one.
 A discussion of why will be included, as well. We also plan on having a 
 demo walkthrough of code that uses our technology, and how it makes parallelizing
-multi-agent scenes trivial.
+multi-agent scenes simpler.
 
 ## Largest Concerns
 
