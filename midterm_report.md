@@ -63,7 +63,35 @@ way of parallelizing their environment, or MPI in the case of clusters (or even
 things like ISPC). If time permits, we also want to provide the CUDA kernels, 
 as well.
 
+Ultimately, our goal is to utilize these implementations of different parallel
+paradigms, ultiize many examples with different topologies of dependencies -- 
+both control and data -- as examples that get built on top of our API, and 
+compare which technologies perform the best on each category. We hope that this
+would allow us to gain a deeper understanding of the fundamental differences
+between these different parallel framework abstractions and the best practices
+for applying them to different types of problems with different categories and
+topologies of dependencies.
 
+
+## Modifications of Deliverables
+
+We hope to change what we're delivering a little bit, as well. In our 
+preproposal report, we mentioned that we wanted to deliver a series of kernels,
+similar to the Spark98 kernels, that will allow us offer developers a quick way
+of parallelizing their multi-agent environments. While this remains one of our
+stretch goals, we are shifting our focus into a more analytical approach rather
+than purely focusing on CUDA. 
+
+We want to utilize all of the technologies discussed in class this semester,
+including OpenMP, OpenMPI, Cilk, ISPC, and possibly CUDA (if time permits) into
+our middleware framework and allow the user to specify a technology they want
+our middleware to use to parallelize their workload. 
+
+In our report, we want to implement multiple examples, both GridWorld-based and
+non-GridWorld based, that will have varying dependency toplogies that will allow
+us to examine how efficient each of the aforementioned technologies are at 
+parallelizing that particular format of workload and compre and constrast these
+things in the report.
 
 
 
