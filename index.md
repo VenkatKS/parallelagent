@@ -11,6 +11,8 @@ Website URL: [https://venkatks.github.io/parallelagent/](https://venkatks.github
 
 [Midterm Report](midterm_report.md)
 
+[Environment Proposals So Far](env_example_proposal.md)
+
 
 ## Summary
 
