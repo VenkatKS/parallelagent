@@ -13,6 +13,8 @@ Website URL: [https://venkatks.github.io/parallelagent/](https://venkatks.github
 
 [Environment Proposals So Far](env_example_proposal.md)
 
+[Final Report](final_report.pdf)
+
 
 ## Summary
 
